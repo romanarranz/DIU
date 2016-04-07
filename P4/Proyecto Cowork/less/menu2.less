@@ -1,0 +1,253 @@
+@import "media.less";
+@import "base.less";
+@import "color.less";
+@import "font-styles.less";
+
+/* Definimos un ancho 100% y una altura fija para nuestro menú */
+header{
+    //.gradient(#3F94BF, #246485);
+    //.gradient(#555, #000);
+    background: white;
+    box-shadow: 0 0 10px #000;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 2000; 
+    color: #444;
+    .montserrat-r();
+
+    a.logo {
+        position: absolute; 
+        display: block; 
+        top: 10px; 
+        left: 10px
+    }
+
+    ul {        
+        @media @desktop-xl {
+            margin-left: 90px;
+            list-style: none;
+            font-size: 14px;        
+            position: absolute;
+            width: 80%;
+        }
+        @media @desktop {
+            margin-left: 70px;
+            list-style: none;
+            font-size: 14px;        
+            position: absolute;
+            width: 80%;
+        }
+        @media @tablet{display:none}
+        @media @mobile{display:none}
+        @media @mobile-mini{display:none}
+
+        li {        
+            display: block;
+            float: left;
+            text-transform: uppercase;
+            text-align: center;
+
+            a {
+                @media @desktop-xl{padding:0 20px;}
+                @media @desktop{padding:0 8px;}
+                display: block;
+                color: #000;
+                text-decoration: none;
+                height: 80px;
+                line-height: 80px;               
+
+                &:hover {
+                    color: #ffc700;
+                }
+                // -- FIX 1.0.2 *START* --
+                &.active {
+                    color: #ffc700;
+                }
+                &[class*="trigger-"] {
+                    &.active { color: #ffc700 !important; }
+                }
+                i {
+                    position: relative;
+                    float: right;
+                    padding-top: 30px;
+                    padding-left: 10px; // antes estaba en &[class*="trigger-"]
+                    /*top: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;*/
+                    text-align: center;
+                }
+                i:after {
+                    //content: '';
+                    position: relative;
+                    /*top: 0;
+                    left: 0;
+                    bottom: 0;
+                    height: 50%;
+                    margin: auto;
+                    border-left: 1px solid rgba(0, 0, 0, 0.15);*/
+                }
+                // -- FIX 1.0.2 *END* --                
+            }
+        }
+    }
+}
+
+.drop-sub {
+    display: none;
+    position: absolute;
+    top: 80px;
+    width: 200px;
+    margin: 0px;  
+    
+    li {
+        width: 100%;
+        display: block;
+        margin: 0;
+        height: 40px;
+        background: black;
+        padding: 2px 20px !important;
+        a {
+            height: 30px;
+            font-size: 12px;
+            color: #fff;
+            line-height: 30px;
+            padding: 0px 20px;
+            &:hover {
+                background: orange;
+                color: #000;
+            }
+            &.active {
+                background: @burdeos-oscuro !important;
+            }
+        }
+    }
+}
+
+.tablet-nav {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: #3B3B3B;
+    z-index: 6100;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+    a {
+        display: block;
+        background: linear-gradient(#3E3E3E, #383838);
+        border-top: 1px solid #484848;
+        border-bottom: 1px solid #2E2E2E;
+        color: white;
+        padding: 15px;
+        text-decoration: none;
+        &:hover, &:focus {
+            //background: linear-gradient(#484848, #383838);
+            background: orange !important;
+        }
+        &:active {
+            background: orange;   
+        }
+        // -- FIX 1.0.2 *START* --
+        &.active {
+            background: @burdeos;
+        }
+        &[class*="trigger-"] {
+            &.active { background: @burdeos !important; }
+        }
+        i {
+            position: relative;
+            float: right;
+            padding-right: 30px; // antes estaba en &[class*="trigger-"]
+            /*top: 0;
+            right: 0;
+            bottom: 0;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;*/
+            text-align: center;
+        }
+        i:after {
+            //content: '';
+            position: relative;
+            /*top: 0;
+            left: 0;
+            bottom: 0;
+            height: 50%;
+            margin: auto;
+            border-left: 1px solid rgba(0, 0, 0, 0.15);*/
+        }
+        // -- FIX 1.0.2 *END* --
+    }
+    .dropdown {
+        display: none;
+        
+        li {
+            width: 100%;
+            display: table;
+
+            a {
+                height: 25px;
+                font-size: 8pt;
+                color: #fff;
+                line-height: 0px;
+                background: @gris-text;
+
+                &:hover {
+                    background: orange;   
+                }
+                &.active {
+                    background: @burdeos-oscuro !important;
+                }
+            }            
+        }
+    }
+    &:after {
+        // sombreado de la parte derecha del menu de navegacion de la izquierda, desplegable
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 34px;
+        .gradientRGBA(to right, rgba(0,0,0,0), rgba(0,0,0,0.4));
+    }
+}
+
+.page-wrap {
+    float: right;
+    width: 100%;
+    transition: width 0.3s ease;
+}
+
+.content {
+    padding: 80px 0px 0px 0px;
+    overflow-x: hidden;
+}
+
+.open-menu {
+    width: 250px;
+    @media @mobile{ width: 200px;}
+    @media @mobile-mini{ width: 180px;}
+}
+
+.nav-mobile {
+    display: none;
+    @media @tablet {display: block;}
+    @media @mobile {display: block;}
+    @media @mobile-mini {display: block;}
+
+    background: url(../img/nav2.png) no-repeat 70% 50%;
+    float: right;
+    width: 100px;
+    height: 80px;
+    position: relative;
+    right: 0;
+    top:0;
+    opacity: .6;
+    padding: 30px 0px 0px 0px;
+}

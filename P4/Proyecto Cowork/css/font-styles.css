@@ -1,0 +1,169 @@
+@font-face {
+  font-family: 'September Mornings';
+  src: url('../lib/fonts/September Mornings.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue Ultrafina';
+  src: url('../lib/fonts/helvetica-neue-ultra-light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Regina';
+  src: url('../lib/fonts/ReginaFree.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../lib/fonts/Montserrat-Thin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat-r';
+  src: url('../lib/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Playfair';
+  src: url('../lib/fonts/PlayfairDisplay-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nickainley';
+  src: url('../lib/fonts/Nickainley.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MoonLight';
+  src: url('../lib/fonts/Moon Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MoonBold';
+  src: url('../lib/fonts/Moon Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BrelaRegular';
+  src: url('../lib/fonts/brelaregular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BigJohn';
+  src: url('../lib/fonts/BIG JOHN.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SlimJoe';
+  src: url('../lib/fonts/Slim Joe.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+.title {
+  padding: 20px 10% 20px 10% !important;
+  font-size: 14px;
+  font-family: 'Montserrat';
+  font-size: 30px;
+}
+@media only screen and (min-width: 350px) and (max-width: 529px) {
+  .title {
+    font-size: 23px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .title {
+    font-size: 23px;
+  }
+}
+.verdana {
+  font-family: verdana,arial;
+}
+.playfair {
+  font-size: 14px;
+  font-family: 'Playfair';
+}
+.montserrat {
+  font-size: 14px;
+  font-family: 'Montserrat';
+}
+.montserrat-r {
+  font-size: 14px;
+  font-family: 'Montserrat-r';
+}
+.raleway {
+  font-size: 14px;
+  font-family: 'Raleway', Arial, sans-serif;
+}
+.brelaregular {
+  font-size: 14px;
+  font-family: 'BrelaRegular';
+}
+.slimjoe {
+  font-size: 14px;
+  font-family: 'SlimJoe';
+}
+.bigjohn {
+  font-size: 14px;
+  font-family: 'BigJohn';
+}
+.moonlight {
+  font-size: 12px;
+  font-family: 'MoonLight';
+}
+.moonbold {
+  font-size: 12px;
+  font-family: 'MoonBold';
+}
+.nickainley {
+  font-size: 12px;
+  font-family: 'Nickainley';
+}
+.regina {
+  font-size: 12px;
+  font-family: 'Regina';
+}
+.september-mornings {
+  font-family: 'September Mornings';
+}
+.helvetica-neue-ultrafina {
+  font-family: 'Helvetica Neue Ultrafina';
+}
+.lucida_grande {
+  font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, Geneva, Verdana, sans-serif;
+}
+.text-justify {
+  text-align: justify !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.uppercase {
+  text-transform: uppercase !important;
+}
+.anchor-text {
+  padding: 10px 10% 10px 10% !important;
+  text-align: justify;
+  color: #949393;
+}
+@media only screen and (min-width: 350px) and (max-width: 529px) {
+  .anchor-text {
+    text-align: left;
+  }
+}

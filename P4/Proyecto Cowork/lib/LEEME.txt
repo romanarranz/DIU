@@ -1,0 +1,25 @@
+MIT LICENSE: 
+Condiciones, la condición es que la nota de copyright y la parte de los derechos se incluya en todas las copias o partes sustanciales del Software
+
+-- LIB --
+Dentro de este directorio se encuentran todas las librerias que se han usado en este proyecto.
+Librerias de mayor complejidad que un slider..., para ese tipo de elementos que aportan dinamismo a nuestra pagina web
+y que hemos implementado de forma manual se encuentran en la carpeta test.
+
++ BootStrap
+	http://getbootstrap.com
++ Icomoon
+	Libreria de iconos
+	https://icomoon.io
+
++ Freewall (MIT license)
+	Librería de javascript que permite cargar imágenes de forma secuencial
+	formando un grid de imágenes flexible, por lo que se ajusta a los tamaños
+	de la imágenes.
+	Inconveniente es un poco lento cuando se cargan muchas imágenes de golpe…
+	
+	Cargando 20 imágenes tarda 3 segundos, habría que intentar cargarlas usando ajax
+	cuando el usuario hiciera scroll en la pagina web.
+
++ Masonry
+	Libreria

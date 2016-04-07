@@ -1,0 +1,37 @@
+-- LESS --
+Hojas de estilo para ser compiladas con lessc
+
+Ejemplo:
+
+$ lessc style.less > style.css
+
++ banner.less
+    contiene todo el css aplicable al banner que aparece en todas las paginas, solo a la caja y a las divisiones
+    de esa caja, izquierda y derecha.
+
++ base.less
+    contiene reglas basicas como transiciones, sombreados, opacidad, gradientes etc... que funcionan en todos 
+    los navegadores ya que tienen las reglas de -webkit etc... cada uno de ellos.
+
++ media.less
+    contiene reglas basicas para determinar los @media de los diferentes tipos de dispositivos
+
++ menu.less
+    contiene todo el css aplicable al menu desplegable horizontal que se encuentra arriba a la izquierda de la pagina web
+    y tambien contiene informacion de debug para saber sobre que version de dispositivo estamos trabajando, ya sea movil,
+    escritorio, tablet...
+
++ slideshow.less
+    contiene todo el css del slideshow
+
++ font-color.less
+    colores de fuente
+
++ font-styles.less
+    tamaños de fuente y tipos de fuente
+
++ color.less
+    colores utilizados en la pagina, son variables
+
++ box.less
+    tamaño de las cajas de la pagina

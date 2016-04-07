@@ -1,0 +1,210 @@
+@import "base.less";
+@import "media.less";
+@import "font-styles.less";
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    background: @gris-body2 !important;
+    font: bold 14px 'Open Sans', sans-serif;
+    &:after {
+        background: red;
+        color:      white;
+        content:    "undefined";
+        top:        80px;
+        right:       0;
+        .opacity_div(80);
+        padding:    .5em 1em;
+        position:   fixed;
+        text-align: center;
+        z-index:    99;
+        @media @mobile-mini {
+            background:     @magenta;
+            content:        "mobile-mini";
+        }
+        @media @mobile {
+             background:    orange;
+             content:       "mobile";
+        }
+        @media @tablet {
+            background:     purple;
+            content:        "tablet";
+        }
+        @media @tablet-mini {
+            background:     @burdeos;
+            content:        "tablet-mini";
+        }
+        @media @desktop {
+            background:     green;
+            content:        "desktop";  
+        }
+        @media @desktop-xl {
+            background:     blue;
+            content:        "desktop-xl";
+        }
+    }
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+header, nav{ display: block; }
+
+header {
+    h1 {
+        @media @mobile {font-size: 18px}
+        @media @mobile-mini {font-size: 18px}
+        font-size: 20px;
+        font-weight: 100;
+    }
+}
+
+section { height: auto; }
+
+h1, h2, h3, p, blockquote, pre {
+    .lucida_grande;
+    font-style: normal;
+    font-variant: normal;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 26px;
+    @media @mobile { font-size: 19px; }
+}
+
+h2 {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 21px;
+}
+
+h3 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 15px;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+small {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+blockquote {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    border-left: 8px solid #ddd;
+}
+
+pre {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+} 
+
+p, strong, blockquote {
+    text-align: justify;
+}
+
+footer {
+    height: 50px;  
+    background: black;
+    color: white;   
+    padding: 15px 0;
+
+    small { 
+        padding: 0 20px; 
+        float: left;
+        a { color: @gris-text; }
+        a:hover { color: white; }
+    }
+
+    @media @mobile {
+        height: 60px;
+        padding: 0;
+        padding-top: 10px;
+    }
+    @media @mobile-mini {
+        height: 60px;
+        padding: 0;
+        padding-top: 10px;
+    }
+}
+
+#phone_number {
+    @media @desktop-xl{right:70px;}
+    @media @desktop{right: 30px;}
+    @media @tablet{left:80px;}
+    @media @mobile{left:80px;}
+    @media @mobile-mini{left:80px;}
+    position: absolute; 
+    display: block; 
+    top: 5px;
+    line-height: 40px;
+    padding: 15px 0px;
+    .montserrat-r();
+
+    & > img { float: left; vertical-align: middle; opacity: .6;}
+} 
+
+.bg-color-1 { background: #2b2b2b !important; }
+.bg-color-2 { background: #1b1b1b !important; }
+.bg-color-3 { background: black !important; }
+.bg-color-4 { background: #2f3238 !important; }
+
+.user-login{
+    position: fixed;
+    color: white;
+    background: rgb(50, 125, 180);
+    padding: 6px 10px;
+    left: 4%;
+    z-index: 1800;
+}
+
+.alert {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    margin: 20px 40px;
+    position: relative;
+    top: -30px;
+
+    & > p {
+        font: bold 18px 'Open Sans', sans-serif !important;
+        color: #d90402 !important;
+    }
+}
+
+.success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    margin: 20px 40px;
+    position: relative;
+    top: -30px;
+
+    & > p {
+        font: bold 18px 'Open Sans', sans-serif !important;
+        color: #3c763d !important;
+    }
+}

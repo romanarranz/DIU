@@ -1,0 +1,65 @@
+@import "base.less";
+@import "media.less";
+@import "font-styles.less";
+@import "box.less";
+
+#search-section{
+    .box-12();
+    background: #2f3238;
+    text-align: left !important;
+    padding: 40px 0px 0px 0px;
+    
+    & > #trigger-overlay { 
+        font-size: 40px;
+        cursor: pointer;
+        left: 10;
+        padding: 0 20px;
+        margin-left: 30px;
+    }
+}
+
+.listaempresas {
+    background: #2f3238;
+    padding: 50px;
+    padding-top: 20px;
+    @media @tablet {padding: 20px;}
+    @media @mobile {padding: 5px;}
+    @media @mobile-mini {padding: 5px;}
+    .box-12();    
+    & > section {        
+        float: left;
+        text-align: center;            
+        height: 310px;            
+
+        @media @desktop-xl { max-width: 32.5%; width: 32.5%; margin: 4px;}
+        @media @desktop { max-width: 32.5%; width: 32.5%; margin: 3px;}
+        @media @tablet { max-width: 48.5%; width: 48.5%; margin: 4px;}
+        @media @tablet-mini { max-width: 100%; width: 100%; margin: 5px 0;}
+        @media @mobile { max-width: 100%; width: 100%; margin: 5px 0;}
+        @media @mobile-mini { max-width: 100%; width: 100%; margin: 5px 0;}
+
+        figure { 
+            max-height: 100%;
+            width: 100%;
+            margin: 0;
+            figcaption > div {
+                height: 70%;
+                h2 { 
+                    .helvetica-neue-ultrafina();
+                    font-size: 30px;
+                    font-weight: 700;
+                    span {
+                        font-family: Raleway, Arial, sans-serif;
+                        font-weight: 800;
+                        font-size: 30px
+                    }
+                }
+                p {
+                    font-family: Raleway, Arial, sans-serif;
+                    font-size: 14px;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}

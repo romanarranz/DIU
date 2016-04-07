@@ -1,0 +1,141 @@
+<== Instalaciones para Desarrollar
+==================================>
+Instalacion de Node JS
+https://nodejs.org/download/
+
+Instalacion de LESS
+$ npm install less -g
+
+Instalacion de YuiCompressor
+$ brew install yuicompressor
+
+Instalacion de HtmlCompressor
+$ npm install html-minifier -g
+
+Instalacion de jpegoptim
+$ brew install jpegoptim
+
+<== Makefiles
+=====================>
+less - Dentro de esta carpeta hay un makefile para compilar los .css y obtener.min.css asi como
+       los .min.css completos y comprimidos de cada una de las paginas para añadirlas como buffet.min.css o similar
+       se encuentran en ./css
+
+js -   Dentro de esta carpeta hay un makefile para compilar los .js y obtener .min.js asi como
+       los .min.js completos y comprimidos de cada una de las paginas para añadirlas como buffet.min.js o similar
+
+/  -   Dentro de la carpeta principal (donde esta la index.html) hay un makefile para comprimir los source/*.html
+       y obtener .html completos y comprimidos de cada una de las paginas en la carpeta destino src
+
+<== Analizadores de Rendimiento
+===============================>
+https://gtmetrix.com
+http://tools.pingdom.com/fpt/
+https://developers.google.com/speed/pagespeed/insights/
+
+<== Tips de Rendimiento
+==========================>
+http://www.giftofspeed.com/how-to/
+
++ Lazy Load Images
+    http://dinbror.dk/blog/blazy/
+
+<== Licencias
+=====================>
+FlatIcons Copyright
+<div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>, <a href="http://www.flaticon.com/authors/scott-de-jonge" title="Scott de Jonge">Scott de Jonge</a>, <a href="http://www.flaticon.com/authors/icomoon" title="Icomoon">Icomoon</a>, <a href="http://www.flaticon.com/authors/ocha" title="OCHA">OCHA</a>, <a href="http://www.flaticon.com/authors/icon-works" title="Icon Works">Icon Works</a>, <a href="http://www.flaticon.com/authors/webalys" title="Webalys">Webalys</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
+
+<== Estructura de directorios
+====================================>
+    classes - Carpeta que contiene las clases de PHP que usa la lógica de la web, como puede ser el registro y login de usuarios.
+
+    config - Carpeta que contiene las traducciones en caso de que se quieran realizar de la web y la configuración básica de la lógica.
+
+    css - Carpeta que contiene todos los archivos .css incluidos los .min.css de cada pagina ya comprimidos y listos
+        min - Carpeta que contiene todos los archivos .min.css
+
+    img - Carpeta que puede contener o no subdirectorios para organizar las imagenes por secciones,
+          normalmente hay una carpeta por pagina
+
+    include - contiene las llamadas php via ajax, modelos de encriptacion de contraseñas y diferentes tipos de modulos como por ejemplo el envío de emails.
+
+    js - Carpeta que contiene los archivos .js de los eventos incluidos los .min.js de cada pagina ya comprimidos y listos
+        min - Carpeta que contiene los archivos .min.js
+
+    less - Carpeta que contiene los archivos .less para compilar y obtener los .css
+
+    lib - Carpeta para librerias
+
+    logs - Carpeta para almacenar los registros de errores a las bases de datos.
+
+    source - Carpeta de las versiones pulidas, funcionales, depuradas de comentarios y listas para ser publicadas de los
+
+    src - Carpeta que tiene los archivos .html definitivos, ya comprimidos
+
+<== .htaccess
+=================>
+Le indicamos al servidor de apache que permita el uso de los archivos .htaccess para cambiar la configuracion del servicio.
+
+/etc/apache2/apache2.conf
+
+<Directory /var/www/>
+->  Options Includes
+    Options Indexes FollowSymLinks
+->  AllowOverride All
+    Require all granted
+</Directory>
+
+Bloquear cabeceras de servidor con Apache editando httpd.conf y añadiendo
+-> ServerSignature Off
+-> ServerTokens Prod
+
+Activar Modulos de apache
+$ sudo a2enmod rewrite
+$ sudo a2enmod setenvif
+$ sudo a2enmod headers
+$ sudo a2enmod expires
+$ sudo a2enmod deflate
+
+<== Instalaciones del Lado del Servidor
+======================================>
+Instalación de un Servidor Web
+$ sudo apt-get install apache2
+
+Instalación de un SGBD
+$ sudo apt-get install mysql-server
+
+Evitar Informacion Sensible en las cabeceras HTTP que envia en Servidor
+$ sudo echo "ServerSignature Off" >> /etc/apache2/apache2.conf
+$ sudo echo "ServerTokens Prod" >> /etc/apache2/apache2.conf
+
+<== Configuracion de MySQL Server
+===================================>
+Le indicamos al servidor que escuche a todos los clientes que se quieran conectar, no solo a localhost
+
+/etc/mysql/my.cnf
+
+#bind-address = 127.0.0.1
+bind-address = 0.0.0.0
+
+Añadimos un nuevo usuario con privilegios de administrador que se pueda conectar desde cualquier ip
+
+mysql> CREATE USER ‘roman’@‘%’ IDENTIFIED BY ‘o5WKxJkRXw’;
+mysql> GRANT ALL PRIVILEGES ON *.* TO ‘roman’@‘%’ WITH GRANT OPTION;
+
+
+<== Captchas
+===============>
+$ sudo apt-get install php5-gd
+
+<== PDO conexión PHP MySQL
+==========================>
+$ sudo apt-get install mysql-client
+$ sudo apt-get install php5-mysql
+$ sudo service apache2 restart
+
+<== php.ini
+================>
+
+Cambiar en /etc/php5/apache2/php.ini
+
+upload_max_filesize = 2M lo cambiamos por: upload_max_filesize = 8M

@@ -1,0 +1,113 @@
+@import "media.less";
+@import "base.less";
+
+/* FullScreen Overlay */
+.overlay {
+    position: fixed;
+    @media @desktop-xl {
+        width: 80%;
+        height: 80%;
+        top: 10%;
+        left: 10%;
+        .transition(all 1s ease);
+    }
+    @media @desktop {
+        width: 80%;
+        height: 80%;
+        top: 10%;
+        left: 10%;
+        .transition(all 1s ease);
+    }
+    @media @tablet {
+        width: 80%;
+        height: 80%;
+        top: 10%;
+        left: 10%;
+        .transition(all 1s ease);
+    }
+    @media @tablet-mini {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        .transition(all 1s ease);
+    }
+    @media @mobile {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        .transition(all 1s ease);
+    }
+    
+    background: rgba(20, 140, 100, 0.9);
+    padding: 20px;
+
+    .transition(all 1s ease);
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    overflow: hidden;
+    border: none;
+    background: url(../img/cross.png) no-repeat center center;
+    text-indent: 200%;
+    color: transparent;
+    outline: none;
+    z-index: 100;
+    cursor: pointer;
+}
+
+/* Effects */
+.overlay-hugeinc {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: opacity 0.5s;
+        transition: opacity 0.5s;
+        z-index: 2000;
+        nav ul {
+            opacity: 1;
+            -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+        }
+    }
+
+    nav {
+        -webkit-perspective: 1200px;
+        perspective: 1200px;  
+        
+        ul {
+            opacity: 0.4;
+            -webkit-transform: translateY(-25%) rotateX(35deg);
+            transform: translateY(-25%) rotateX(35deg);
+            -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+            transition: transform 0.5s, opacity 0.5s;
+        }
+    }
+    
+    &.close nav ul {
+        -webkit-transform: translateY(25%) rotateX(-35deg);
+        transform: translateY(25%) rotateX(-35deg);
+    }
+}
+
+@media screen and (max-height: 30.5em) {
+    .overlay nav {
+        height: 70%;
+        font-size: 34px;
+    }
+    .overlay ul li {
+        min-height: 34px;
+    }
+}

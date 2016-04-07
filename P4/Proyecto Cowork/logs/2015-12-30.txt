@@ -1,0 +1,15 @@
+Time : 20:04:46
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'email' in 'where clause'
+Raw SQL : SELECT * FROM users WHERE email = :email
+
+Time : 20:03:10
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'coworking.usuario' doesn't exist
+Raw SQL : SELECT * FROM usuario WHERE email = :email
+
+Time : 13:50:26
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nombre' in 'field list'
+Raw SQL : SELECT nombre, email FROM users WHERE nombre = :nombre OR email = :email
+
+Time : 13:44:30
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'coworking.usuario' doesn't exist
+Raw SQL : SELECT nombre, email FROM usuario WHERE nombre = :nombre OR email = :email

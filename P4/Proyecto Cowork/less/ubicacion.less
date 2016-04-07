@@ -1,0 +1,66 @@
+@import "base.less";
+@import "media.less";
+@import "font-styles.less";
+
+// <== ubicacion.html
+// =====================>
+
+.scrolloff { pointer-events: none; }
+
+.llegar {
+    &.avion {background-color: black}
+    &.bus {background-color: #671937}
+    &.coche {background-color: @amber-700;}    
+    h2 {
+        color: white;
+    }
+    img {
+        padding-top: 20px;
+    }
+}
+
+#frame-cortina.ubicacion-mapa {
+    height: 500px;
+    position: absolute;
+    background:  
+    /* top, transparent red */
+    linear-gradient(
+        rgba(90, 0, 230, 0.15),
+        rgba(0, 0, 0, 0.95)        
+    );
+    text-align: center;
+    z-index: 1900;
+    font-size: 15px;
+    .transition(all 1s ease);
+
+    h1{
+        position: relative;        
+        .nickainley();
+        color: white;
+        font-size: 70px;        
+        margin-top: 200px;
+        .opacity(1);
+        .transition(all 1s ease);
+    }
+
+    p{
+        top: 30px;
+        .transition(all 1s ease);
+    }
+}
+
+#tool-button {
+    display: none;
+    position: absolute;
+    text-align: center;    
+    z-index: 1900;
+    font-size: 15px;
+    p{
+        border-color: #3078ff !important; 
+        .opacity(0);
+        top: 30px;
+        color: #3078ff;
+        .transition(all 1s ease);
+    }
+    .transition(all 1s ease);
+}

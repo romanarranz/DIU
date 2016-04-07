@@ -1,0 +1,25 @@
+@import "media.less";
+
+#text-rotator{
+    height: auto; 
+    width: 100%;
+    ul {
+        height: 120px;
+        @media @tablet { height: 150px }
+        @media @tablet-mini { height: 170px }
+        @media @mobile { height: 190px }
+        li {
+            width: 100%;
+            padding: 0 10%;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: lighter;                      
+        }        
+        .textItem {
+            position: absolute;
+            display: none;
+            text-align: justify;
+            color: #999;
+        }
+    } 
+}

@@ -1,0 +1,55 @@
+@import "base.less";
+
+.centered {
+    width: 300px;
+    margin: auto;
+}
+
+.control-inline label {
+    display: inline; 
+}
+
+.styled-checkbox {
+    position: absolute;
+    opacity: 0;
+
+    & + label {
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+        
+        &:before {
+            content: '';
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: text-top;
+            width: 20px;
+            height: 20px;
+            background: white;
+        }
+    }
+
+    &:focus + label:before, &:hover + label:before {
+        background: orange;
+        box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.12);    
+    }
+
+    &:checked + label:before{ background: orange; }
+    &.disabled + label, &[disabled] + label{color: #b8b8b8;}
+    &.disabled + label:before, &[disabled] + label:before{box-shadow: none; background: #ddd;}
+
+    &:checked + label:after{
+        content: '';
+        position: absolute;
+        left: 6px;
+        top: 9px;
+        background: white;
+        width: 2px;
+        height: 2px;
+        box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white;
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);   
+    }
+}

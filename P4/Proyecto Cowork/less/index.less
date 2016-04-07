@@ -1,0 +1,53 @@
+@import "base.less";
+@import "media.less";
+@import "font-styles.less";
+
+// <== index.html
+// =====================>
+.scrolloff { pointer-events: none; }
+
+#frame-cortina.ubicacion-mapa {
+    height: 500px;
+    position: absolute;
+    background:  
+    /* top, transparent red */
+    linear-gradient(
+        rgba(250, 150, 30, 0.55),
+        rgba(255, 255, 255, 0.45)
+    );
+    text-align: center;
+    z-index: 1900;
+    font-size: 15px;
+    .transition(all 1s ease);
+
+    h1{
+        position: relative;        
+        .nickainley();
+        color: white;
+        font-size: 70px;        
+        margin-top: 200px;
+        .opacity(1);
+        .transition(all 1s ease);
+    }
+
+    p{
+        top: 30px;
+        .transition(all 1s ease);
+    }
+}
+
+#tool-button {
+    display: none;
+    position: absolute;
+    text-align: center;    
+    z-index: 1900;
+    font-size: 15px;
+    p{
+        border-color: #3078ff !important; 
+        .opacity(0);
+        top: 30px;
+        color: #3078ff;
+        .transition(all 1s ease);
+    }
+    .transition(all 1s ease);
+}

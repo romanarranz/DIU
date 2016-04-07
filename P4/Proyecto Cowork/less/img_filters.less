@@ -1,0 +1,118 @@
+@import "base.less";
+
+// <== Black and White
+// ===========================>
+.grayscale {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    .transition(all 1s ease);
+}
+// cuando se pasa el mouse por encima de la imagen vuelve a su estado original, quitando el filtro de escala
+// de grises
+.grayscale:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+// <== Sepia
+// ===========================>
+.sepia {
+    -webkit-filter: sepia(1);
+    filter: sepia(1); 
+    .transition(all 1s ease);
+}
+.sepia:hover {
+    -webkit-filter: sepia(0);
+    filter: sepia(0); 
+}
+// <== Saturacion de color
+// ===========================>
+.saturate { 
+    -webkit-filter: saturate(8);
+    filter: saturate(8);
+    .transition(all 1s ease);
+}
+.saturate:hover {
+    -webkit-filter: saturate(0);
+    filter: saturate(0);
+}
+// <== Cambia color en direccion a la paleta de colores
+// ====================================================>
+// The value of “angle” defines the number of degrees around the color circle the input samples will be adjusted. 
+// A value of 0deg leaves the input unchanged
+.hue_rotate {
+  -webkit-filter: hue-rotate(90deg);
+  filter: hue-rotate(90deg);
+  .transition(all 1s ease);
+}
+.hue_rotate:hover {
+  -webkit-filter: hue-rotate(0deg);
+  filter: hue-rotate(0deg);
+}
+// <== Invertir colores
+// ===========================>
+.invert {
+    -webkit-filter: invert(.8);
+    filter: invert(.8);
+    .transition(all 1s ease);
+}
+.invert:hover {
+    -webkit-filter: invert(0);
+    filter: invert(0);
+}
+
+// <== Opacidad de una imagen 0 max - 1 min
+// =======================================>
+// LO DEJO COMENTADO PORQUE YA SE DEFINIÓ EN base.less
+/*.opacity {
+    -webkit-filter: opacity(.4);
+    filter: opacity(.4);
+    .transition(all 1s ease);
+}
+.opacity:hover {
+    -webkit-filter: opacity(1);
+    filter: opacity(1);
+}*/
+// <==  Nivel de brillo  0 sin brillo - 1 brillo normal > 1 mucho mas brillo
+// ======================>
+.brightness {
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
+    .transition(all 1s ease);
+}
+.brightness:hover {
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+}
+// <==  Nivel de contraste  0 sin contraste - 1 contraste normal > 1 mucho mas contraste
+// =========================>
+.contrast {
+    -webkit-filter: contrast(4);
+    filter: contrast(4);
+    .transition(all 1s ease);
+}
+.contrast:hover {
+    -webkit-filter: contrast(1);
+    filter: contrast(1);   
+}
+// <==  Nivel de desenfoque 0px sin desenfoque > mas desenfoque
+// =========================>
+.blur {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    .transition(all 1s ease);
+}
+.blur:hover {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+}
+// <==  Imagen Arrojar sombras (parecido a box-shadow) 
+// ===================================================>
+.drop-shadow {
+    -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+    filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+    .transition(all 1s ease);
+}
+.drop-shadow:hover {
+    -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+    filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+}
