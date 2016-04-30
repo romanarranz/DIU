@@ -7,7 +7,7 @@ Prácticas de la asignatura Desarrollo de Interfaces de Usuario cursada en el Gr
 
 Índice de Prácticas
 -------------
-#### Práctica 3: Web Coworking
+#### Práctica 4: Web Coworking
 En esta práctica se aborda tanto el diseño como la implementación de las diferentes vistas de una página web para las empresas de coworking. Se incluye una mínima parte funcional de usuarios y envio de correos a los usuarios cuando realizan el registro en la web.
 
 Licencia
